@@ -1,0 +1,73 @@
+
+<!-- <div class="center">
+  <div class="mat-display-2"> COVID-19 Coronavirus Pandemic</div>
+
+</div>
+<hr> -->
+
+  <!-- <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-center">Corona COVID-19 Tracker</h1>
+     
+    </div>
+  </div> -->
+  <!-- <hr> -->
+
+  <!-- <hr> -->
+
+
+<div class="bgapp">
+  
+  <section class="section">
+    
+    <label for="caseType" class="mat-title2"><b>Select your Case Type :</b></label>
+    <mat-radio-group >
+    <mat-radio-button color="accent" class="margin"  id="c" value="c" #c (change) ="updateChart($event)" name="caseType" checked> Confirmed</mat-radio-button>
+    <mat-radio-button color="warn" class="margin"  id="d" value="d" #d (change) ="updateChart($event)" name="caseType"> Death</mat-radio-button>
+    <mat-radio-button color="primary" class="margin"  id="a" value="a" #a (change) ="updateChart($event)" name="caseType"> Active</mat-radio-button>
+    <mat-radio-button color="primary" class="margin"  id="r" value="r" #r (change) ="updateChart($event)" name="caseType">Recovered</mat-radio-button>
+    </mat-radio-group>
+   
+    
+  <br>
+  <app-map></app-map>
+  <app-dashbord-card
+  [totalComfirmed] ='totalComfirmed'
+  [totalDeath] ='totalDeath'
+  [totalRecovered] ='totalRecovered'
+  [totalActive] ='totalActive'
+></app-dashbord-card>
+  <div fxLayout="row">
+
+    <div fxFlex="50">
+      <mat-card style="width: 99%;">
+        <highcharts-chart 
+    [Highcharts]="highcharts"
+    [options]="chartOptions"
+    style="width: 100%; height: 500px; display: block;"
+  ></highcharts-chart>
+      </mat-card>
+      
+    </div>
+    <div fxFlex="50">
+      <mat-card style="width: 99%; float: right;">
+        <highcharts-chart 
+    [Highcharts]="columnHighcharts"
+    [options]="columnchartOptions"
+    style="width: 100%; height: 500px; display: block;"
+  ></highcharts-chart>
+      </mat-card>
+      
+    </div>
+  </div>
+</section>
+  <div>
+    
+    <app-datatable></app-datatable>
+
+   
+    
+  </div>
+
+</div>
+  

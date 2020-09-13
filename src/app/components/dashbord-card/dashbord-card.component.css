@@ -1,0 +1,5 @@
+.mat-card{
+    -webkit-box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+    -moz-box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+    box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+}

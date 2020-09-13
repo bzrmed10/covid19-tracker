@@ -1,0 +1,49 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    
+  }
+  .bgapp{
+    background-color: #f9f9f9;
+}
+  .center {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    background-color:#f9f9f9;
+    color: #3A506B;
+  }
+
+  .mat-display-2, .mat-typography .mat-display-2 {
+    margin: 0;
+}
+  /* td, th {
+    width: 25%;
+  } */
+  .chartDiv{
+      margin: 20px;
+  }
+  .filterTable{
+    margin: 20px;
+     width: 400px; 
+  }
+  .blue{
+    color: #7cb5ec;
+  }
+  .red{
+    color: #f78181;
+  }
+  .green {
+    color: #8eec7a96;
+  }
+
+  .mat-card{
+    -webkit-box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+    -moz-box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+    box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+}

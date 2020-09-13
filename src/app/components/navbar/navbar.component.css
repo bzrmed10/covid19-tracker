@@ -1,0 +1,24 @@
+.navbar{
+    justify-content: space-between;
+}
+span {
+    padding-right: 2rem;
+}
+
+a{
+    text-decoration-line: none;
+    color: #3A506B;
+    font-size: medium;
+}
+/* a.activelinkmenu {
+  
+  /* color: rgb(156, 140, 140); */
+ /* color: #C7D66D; */
+/* }  */
+
+
+.mat-toolbar.mat-primary {
+    background: white;
+    color: #6d737a;
+}
+

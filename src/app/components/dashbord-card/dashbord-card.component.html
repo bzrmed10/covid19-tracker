@@ -1,0 +1,37 @@
+<div  fxLayout="row" style="margin-top: 15px; margin-bottom: 15px;"
+   fxLayoutAlign="space-between center" 
+   fxLayoutGap="20px"
+   class="stats-cards">
+   <mat-card style="color: #7cb5ec; font-size: 25px;" fxFlex="25">
+      <div fxLayout="row">
+         <mat-icon fxFlex="40" style="font-size: 50px;">trending_up</mat-icon>
+         <div fxFlex="60" style="float: left;">
+            {{totalComfirmed | number}} <br><br> Comfirmed
+         </div>
+      </div>
+   </mat-card>
+   <mat-card style="color: #f78181; font-size: 25px;" fxFlex="25">
+      <div fxLayout="row">
+         <mat-icon fxFlex="40" style="font-size: 50px;">report_problem</mat-icon>
+         <div fxFlex="60" style="float: left;">
+            {{totalDeath | number}} <br><br> Deaths 
+         </div>
+      </div>
+   </mat-card>
+   <mat-card style="color: #8eec7a96; font-size: 25px;" fxFlex="25">
+      <div fxLayout="row">
+         <mat-icon fxFlex="40" style="font-size: 50px;">verified_user</mat-icon>
+         <div fxFlex="60" style="float: left;">
+            {{totalRecovered | number}} <br><br> Recovered 
+         </div>
+      </div>
+   </mat-card>
+   <mat-card style="color: #fada69b8; font-size: 25px;" fxFlex="25">
+      <div fxLayout="row">
+         <mat-icon fxFlex="40" style="font-size: 50px;">medical_services</mat-icon>
+         <div fxFlex="60" style="float: left;">
+            {{totalActive | number}} <br><br> Active
+         </div>
+      </div>
+   </mat-card>
+</div>

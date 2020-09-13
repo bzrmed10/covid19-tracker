@@ -1,0 +1,131 @@
+<!-- <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-center">Corona COVID-19 Tracker by country</h1>
+     
+    </div>
+  </div> -->
+  <!-- <div class="center">
+    <div class="mat-display-2"> COVID-19 Statistics In {{defaultCountry}}</div>
+  
+  </div> -->
+  <app-map></app-map>
+  <hr>
+  <div class="mx-auto">
+    <div class="form-group col-lg-5 mx-auto">
+      <mat-form-field appearance="">
+        <mat-label>Select Country</mat-label>
+        <mat-select disableRipple [(value)]="defaultCountry" name="country" id="country" #inputCountry (selectionChange)="updateCountry(inputCountry.value)">
+          <mat-option value="{{country}}" *ngFor="let country of countries"> {{country}}</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+  
+    </div>
+      <app-dashbord-card
+      [totalComfirmed] ='totalComfirmed'
+      [totalDeath] ='totalDeath'
+      [totalRecovered] ='totalRecovered'
+      [totalActive] ='totalActive'
+    ></app-dashbord-card>
+
+  </div>
+  <hr>
+
+<div class="bgapp">
+  <br>
+  <div class="chartDiv" fxLayout="row">
+    <div  fxFlex="50">
+      <mat-card style="width: 99%;">
+        <highcharts-chart 
+          [Highcharts]="Highcharts"
+          [options]="chartOptions"
+          style="width: 100%; height: 600px; display: block;"
+        ></highcharts-chart>
+      </mat-card>
+    </div>
+    <div fxFlex="50">
+      <mat-card style="width: 99%; float: right;">
+        <highcharts-chart 
+        [Highcharts]="HighchartsPerDay"
+        [options]="chartOptionsPerDay"
+        style="width: 100%; height: 600px; display: block;"
+      ></highcharts-chart>
+      </mat-card>
+    </div>
+    
+    
+  
+   
+   </div>
+  
+  
+    <div class="chartDiv">
+    
+      <div class="mat-elevation-z8" style=" width: 100%;">
+        <mat-form-field class="filterTable" > 
+          <mat-label>Search</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Search ..." #input>
+        </mat-form-field>
+        
+        <table mat-table [dataSource]="dataSource" matSort matSortActive="date" matSortDirection="desc" >
+      
+    
+          <ng-container matColumnDef="cases">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Comfirmed  Cases</b> </th>
+            <td mat-cell *matCellDef="let row"> {{row.cases | number}} </td>
+          </ng-container>
+      
+    
+          <ng-container matColumnDef="country">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Country</b> </th>
+            <td mat-cell *matCellDef="let row"><b>{{row.country}}</b>  </td>
+          </ng-container>
+      
+    
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Date</b> </th>
+            <td mat-cell *matCellDef="let row"><b> {{row.date |date}}</b> </td>
+          </ng-container>
+          <ng-container matColumnDef="numbercasesperdate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>Cases per day</b> </th>
+            <td mat-cell *matCellDef="let row" class="blue"><mat-icon style="font-size: 16px;">trending_up</mat-icon> + {{row.numbercasesperdate | number}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="deaths">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Total Deaths</b>  </th>
+            <td mat-cell *matCellDef="let row">  {{row.deaths | number}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="numberdeathperdate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>Deaths per day</b> </th>
+            <td mat-cell *matCellDef="let row" class="red"><mat-icon style="font-size: 16px;">report_problem</mat-icon> + {{row.numberdeathperdate | number}} </td>
+          </ng-container>
+  
+  
+          <ng-container matColumnDef="recovred">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Total Recovred</b> </th>
+            <td mat-cell *matCellDef="let row">  {{row.recovred | number}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="numberrecovredperdate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Recovred per day</b> </th>
+            <td mat-cell *matCellDef="let row" class="green"><mat-icon style="font-size: 16px;">verified_user</mat-icon> + {{row.numberrecovredperdate | number}} </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+        
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[ 10, 25,50, 100]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div> 
+  
+</div>
+
+
+

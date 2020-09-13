@@ -1,0 +1,75 @@
+.center {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    background-color:#f9f9f9;
+    color: #3A506B;
+  }
+  .bgapp{
+    background-color: #f9f9f9;
+}
+  .mat-display-2, .mat-typography .mat-display-2 {
+    margin: 0;
+}
+.mat-h2, .mat-title, .mat-typography h2 {
+  margin: 0px 0 0px;
+}
+  .margin{
+    margin : 10px;
+  }
+  .section{
+    margin : 20px;
+    margin-top: 10px;
+
+  }
+  label {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+  .mat-card{
+    -webkit-box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+    -moz-box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+    box-shadow: -1px 5px 18px -9px rgba(0,0,0,0.37);
+}
+
+/* .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #7cb5ec;
+} */
+
+.mat-success {
+  background-color: #90ED7D !important;
+}
+
+
+  ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+        background-color: #7cb5ec!important;   /*inner circle color change*/
+  }
+
+  ::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+       border-color:#7cb5ec!important; /*outer ring color change*/
+  }
+
+  ::ng-deep .mat-radio-button.mat-primary .mat-radio-inner-circle {
+    background-color: #fada69!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
+   border-color:#fada69!important; /*outer ring color change*/
+}
+
+::ng-deep .mat-radio-button.mat-warn .mat-radio-inner-circle {
+  background-color: #f78181!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-warn.mat-radio-checked .mat-radio-outer-circle {
+ border-color:#f78181!important; /*outer ring color change*/
+}
+
+::ng-deep .mat-radio-button.mat-success .mat-radio-inner-circle {
+  background-color: #90ED7D!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-success.mat-radio-checked .mat-radio-outer-circle {
+ border-color:#90ED7D!important; /*outer ring color change*/
+}
