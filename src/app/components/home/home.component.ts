@@ -31,15 +31,12 @@ export class HomeComponent implements OnInit {
   dataMap;
   constructor(private dataService :DataServiceService,private homeService:HomeService) {
     
-    
-    
-    
    }
 
   
 
   ngOnInit() {
-  
+   console.log("test");
 
     
     this.initPieChart();
